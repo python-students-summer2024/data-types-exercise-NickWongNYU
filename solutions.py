@@ -10,7 +10,12 @@ def calculate_profit():
     Complete this function so that it asks the user to enter in the projected amount of total sales and then displays the profit that will be made from that amount.
     You can assume the user will enter only numeric characters, e.g. "3000", not "$3,000.00"
     The output should match the format of the following examples: "Profit: $690.00" for sales of $3,000, or "Profit: $2,300.00" for sales of $10,000, etc.
+
+    
     """
+    total_sales = float(input("Enter the projected amount of total sales: "))
+    profit = total_sales * 0.23
+    print(f"Profit: ${profit:,.2f}")
 
 
 def calculate_quotient_and_remainder():
@@ -22,6 +27,11 @@ def calculate_quotient_and_remainder():
       Enter number #2: 2
       2 goes into 5 a total of 2 times with a remainder of 1
     """
+    number_1 = float(input("Choose your first integer: "))
+    number_2 = float(input("Choose your second integer: "))
+    quotient = number_1 // number_2
+    remainder = number_1 % number_2
+    print(f"{number_2:,.0f} goes into {number_1:,.0f} a total of {quotient:,.0f} times with a remainder of {remainder:,.0f}")
 
 
 def calculate_miles_per_gallon():
@@ -35,6 +45,13 @@ def calculate_miles_per_gallon():
       Gas used (gallons): 25
       Miles per gallon: 2.2
     """
+    miles_driven = float(input("Miles driven: "))
+    gas_used = float(input("Gas used (gallons): "))
+    mpg = miles_driven / gas_used
+
+    print(f"Miles driven: {miles_driven:,.0f}")
+    print(f"Gas used (gallons): {gas_used:,.0f}")
+    print(f"Miles per gallon: {mpg:.1f}")
 
 
 def align_text():
@@ -53,3 +70,12 @@ def align_text():
       Price #2: $   10.00
       Price #3: $ 9532.60
     """
+
+    price1 = float(input("Enter price #1: "))
+    price2 = float(input("Enter price #2: "))
+    price3 = float(input("Enter price #3: "))
+
+    print("\nHere are your prices!\n")
+    print("Price #1: ${:10.2f}".format(price1))
+    print("Price #2: ${:10.2f}".format(price2))
+    print("Price #3: ${:10.2f}".format(price3))
